@@ -1,0 +1,122 @@
+/* WhoWeAre.css */
+
+/* Section container */
+.who-we-are-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #0f3832, #113734);
+  color: #e4d3aa;
+}
+
+/* Headline */
+.who-headline {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-family: var(--font-geist-sans), sans-serif;
+  color: #e4d3aa;
+}
+
+/* Group: center title + tile vertically */
+.section-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/* Title above each tile */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e4d3aa;
+  font-family: var(--font-geist-sans), sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Tile block */
+.section-tile {
+  width: 280px;
+  height: 280px;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section-tile:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Icon inside tile */
+.tile-icon {
+  font-size: 2rem;
+  color: #e4d3aa;
+  margin-bottom: 0.5rem;
+}
+
+/* Tile text */
+.section-tile p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #e4d3aa;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+/* Learn More button */
+.learn-more-button {
+  background-color: transparent;
+  border: 1px solid #e4d3aa;
+  color: #e4d3aa;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-family: var(--font-geist-sans), sans-serif;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.learn-more-button:hover {
+  background-color: #e4d3aa;
+  color: #113734;
+}
+
+/* CTA button inside modal */
+.book-button {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #e4d3aa;
+  color: #113734;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.book-button:hover {
+  background-color: #fff3c2;
+  color: #113734;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-group {
+    margin-bottom: 3rem;
+  }
+
+  .section-tile {
+    width: 100%;
+    max-width: 320px;
+  }
+}

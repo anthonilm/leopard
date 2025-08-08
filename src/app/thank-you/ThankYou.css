@@ -1,0 +1,24 @@
+.thankyou-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ece7db, #ffffff);
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: var(--font-geist-sans);
+  color: #111;
+}
+
+.thankyou-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.thankyou-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.thankyou-button {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #333;
+}

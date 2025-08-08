@@ -1,0 +1,30 @@
+.email-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  font-family: var(--font-geist-sans);
+}
+
+.email-signup-form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.email-signup-form button {
+  padding: 0.75rem;
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.message.success {
+  color: green;
+}
+
+.message.error {
+  color: red;
+}

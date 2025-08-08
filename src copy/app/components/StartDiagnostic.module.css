@@ -1,0 +1,35 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0a0a0a, #1b2e2c); /* carbon to Hidden Gem fade */
+  padding: 0 2rem;
+}
+
+.inner {
+  text-align: center;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+  color: #f5f5f5;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #c2b280; /* muted gold / bone */
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e0d5a8;
+}

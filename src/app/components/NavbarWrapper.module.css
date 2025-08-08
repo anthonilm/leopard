@@ -1,0 +1,32 @@
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background: transparent;
+  pointer-events: none;
+}
+
+.right {
+  display: flex;
+  gap: 1.25rem;
+  pointer-events: auto;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: opacity 0.3s ease;
+}
+
+.navButton:hover {
+  opacity: 0.75;
+}

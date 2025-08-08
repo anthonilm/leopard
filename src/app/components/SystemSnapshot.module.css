@@ -1,0 +1,38 @@
+.stack {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  /* background removed for continuous gradient */
+}
+
+.tile {
+  scroll-snap-align: start;
+  height: 100vh;
+  padding: 4rem 2rem;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* background removed to inherit root fade */
+}
+
+.tile:hover {
+  background-color: rgba(213, 203, 184, 0.6); /* faded hover effect without harsh override */
+  transform: translateY(-2px);
+}
+
+.tile h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tile p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}

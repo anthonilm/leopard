@@ -1,0 +1,15 @@
+.booking-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ece7db, #ffffff); /* bone to white */
+  padding: 2rem;
+  font-family: var(--font-geist-sans);
+  color: #111;
+}
+
+.booking-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: var(--font-geist-sans);
+}

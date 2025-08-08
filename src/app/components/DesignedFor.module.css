@@ -1,0 +1,54 @@
+.wrapper {
+  padding: 4rem 2rem;
+  /* background removed to allow continuous parent gradient */
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #e4d3aa;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 90vw;
+  max-width: 600px;
+  scroll-snap-align: center;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 6px 20px rgba(0, 255, 180, 0.2);
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e4d3aa;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e4d3aa;
+}

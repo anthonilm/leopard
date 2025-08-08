@@ -1,0 +1,47 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background removed to allow parent-level fade */
+  color: #e4d3aa;
+  padding: 0 2rem;
+}
+
+.container {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #e4d3aa;
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #e4d3aa;
+}
+
+.button {
+  display: inline-block;
+  background-color: #e4d3aa;
+  color: #111;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d4c29f;
+}
