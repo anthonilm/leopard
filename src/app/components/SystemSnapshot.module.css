@@ -1,38 +1,283 @@
-.stack {
-  height: 100vh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  /* background removed for continuous gradient */
+/* Root section: same visual gradient/colors as Who We Are */
+.section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #0f3832, #113734);
+  color: #e4d3aa;
+  position: relative;
 }
 
-.tile {
-  scroll-snap-align: start;
+/* Headline: same style */
+.headline {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-geist-sans), sans-serif;
+  color: #e4d3aa;
+}
+
+/* VERTICAL SCROLL COLUMN (mirrors horizontal, rotated) */
+.scrollCol {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  row-gap: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 100vh;
-  padding: 4rem 2rem;
-  color: #111;
+  padding-right: 0;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Each group is a snap-aligned row item */
+.group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
-  text-decoration: none;
+  scroll-snap-align: start;
+}
+
+/* Title above each tile */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e4d3aa;
+  font-family: var(--font-geist-sans), sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+/* Tile block */
+.tile {
+  width: 280px;
+  height: 280px;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   transition: background-color 0.3s ease, transform 0.3s ease;
-  /* background removed to inherit root fade */
+  color: #e4d3aa;
+  text-decoration: none;
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 .tile:hover {
-  background-color: rgba(213, 203, 184, 0.6); /* faded hover effect without harsh override */
-  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
 }
 
-.tile h2 {
-  font-size: 2rem;
+/* Tile body text */
+.tile p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #e4d3aa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headline {
+    margin-bottom: 1.5rem;
+  }
+}
+.centeredSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.singleTileWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.centeredGroup {
+  max-width: 800px;
+  text-align: center;
+}
+
+.boneBacklight {
+  background-color: #e8e3d9; /* Bone color from your palette */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boneBacklight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+/* Root section: same visual gradient/colors as Who We Are */
+.section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #0f3832, #113734);
+  color: #e4d3aa;
+  position: relative;
+}
+
+/* Headline */
+.headline {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-geist-sans), sans-serif;
+  color: #e4d3aa;
+}
+
+/* Two-column layout: steps left, info panel right */
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Stacked step tiles */
+.stepsStack {
+  display: grid;
+  gap: 1rem;
+}
+
+.stepTile {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stepTile:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.stepIndex {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: rgba(232, 227, 217, 0.2); /* bone tint */
+  color: #e4d3aa;
+}
+
+.stepBody { display: grid; gap: 0.2rem; }
+
+.stepTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #e4d3aa;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+.stepBlurb {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #e4d3aa;
+}
+
+/* High-visibility bone panel for the paragraph */
+.infoPanel {
+  background: #e8e3d9;            /* bone backlight */
+  color: #113734;                  /* deep green text for contrast */
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-geist-sans), sans-serif;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  max-width: 72ch;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+  .infoPanel {
+    order: -1;          /* put the message first on mobile for visibility */
+    margin-bottom: 1.5rem;
+  }
+}
+/* Make right column (info panel) centered vertically & horizontally */
+.infoPanel {
+  background: #e8e3d9;            /* bone backlight */
+  color: #113734;                  /* deep green text for contrast */
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-geist-sans), sans-serif;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  max-width: 72ch;
+
+  /* Centering in column */
+  display: flex;
+  justify-content: center;  /* horizontal */
+  align-items: center;      /* vertical */
+  text-align: center;       /* center text itself */
+}
+
+/* Ensure grid rows stretch so vertical centering works */
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 2rem;
+  align-items: stretch; /* stretch so both columns fill the height */
+}
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center; /* Centers the tiles and text vertically */
+}
+
+.infoPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  height: 100%;
+}
+
+.infoPanel p,
+.infoPanel ul {
   margin-bottom: 1rem;
 }
 
-.tile p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 600px;
+.infoPanel ul {
+  padding-left: 1.5rem;
+}
+.infoPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: flex-start; /* left-align text */
+  height: 100%;
+  text-align: left; /* make sure text aligns left */
+}
+
+.infoPanel p,
+.infoPanel ul {
+  margin-bottom: 1rem;
+}
+
+.infoPanel ul {
+  padding-left: 1.5rem;
 }

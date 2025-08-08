@@ -4,8 +4,8 @@ import Hero from './components/Hero';
 import OneOnOneCTA from './components/OneOnOneCTA';
 import DesignedFor from './components/DesignedFor';
 import SystemSnapshot from './components/SystemSnapshot';
+import WhoWeAreHorizontal from './components/WhoWeAreHorizontal';
 import EmailSignup from './components/EmailSignup';
-import Footer from './components/Footer';
 import AnimatedSection from './components/AnimatedSection';
 
 export default function Home() {
@@ -27,11 +27,14 @@ export default function Home() {
         <AnimatedSection>
           <SystemSnapshot />
         </AnimatedSection>
+        {/* New: Who We Are section (horizontal scroll) */}
+        <AnimatedSection>
+          <WhoWeAreHorizontal />
+        </AnimatedSection>
         <AnimatedSection>
           <EmailSignup />
         </AnimatedSection>
       </div>
-      <Footer />
     </main>
   );
 }

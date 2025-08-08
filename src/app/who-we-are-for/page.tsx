@@ -1,10 +1,10 @@
-'use client';
 
+import type { Metadata } from 'next';
 import styles from './WhoWeAreFor.module.css';
 import Link from 'next/link';
 import { siteMeta } from '@/lib/meta';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: siteMeta.routes['/who-we-are-for']?.title ?? 'Who We Are For',
   description: siteMeta.routes['/who-we-are-for']?.description ?? '',
 };
@@ -12,19 +12,22 @@ export const metadata = {
 const groups = [
   {
     title: 'Students',
-    description: `High-capacity learners navigating complex demands. Includes study systems, test prep protocols, and burnout buffers. Diagnostic tools assess executive functioning, learning preferences, and daily routines.`,
+    description:      'High-capacity learners navigating complex demands. Includes study systems, test prep protocols, and burnout buffers. Diagnostic tools assess executive functioning, learning preferences, and daily routines.',
   },
   {
     title: 'Executives',
-    description: `Leaders operating under sustained performance pressure. Includes decision frameworks, stress cycle recovery tools, and meeting hygiene protocols. Diagnostics focus on attention, stamina, and task clarity.`,
+    description:
+      'Leaders operating under sustained performance pressure. Includes decision frameworks, stress cycle recovery tools, and meeting hygiene protocols. Diagnostics focus on attention, stamina, and task clarity.',
   },
   {
     title: 'Teachers',
-    description: `Mentors balancing instruction, guidance, and resilience. Includes communication scaffolds, planning systems, and adaptive instruction templates. Diagnostics assess instructional rhythm, emotional labor, and fatigue triggers.`,
+    description:
+      'Mentors balancing instruction, guidance, and resilience. Includes communication scaffolds, planning systems, and adaptive instruction templates. Diagnostics assess instructional rhythm, emotional labor, and fatigue triggers.',
   },
   {
     title: 'Young Professionals',
-    description: `Individuals translating potential into sustainable output. Includes execution scaffolds, goal decomposition, and pace regulation systems. Diagnostics explore work style alignment, recovery debt, and risk of overextension.`,
+    description:
+      'Individuals translating potential into sustainable output. Includes execution scaffolds, goal decomposition, and pace regulation systems. Diagnostics explore work style alignment, recovery debt, and risk of overextension.',
   },
 ];
 
