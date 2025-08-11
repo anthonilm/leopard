@@ -6,6 +6,10 @@ import styles from './Hero.module.css';
 export default function Hero() {
   return (
     <section className={styles.hero}>
+      <div className={styles.topLeftText}>
+        <div>Noesis Systems LLC</div>
+        <div>Cognitive Behavioral Performance Support</div>
+      </div>
       <div className={styles.logoContainer}>
         <div className={styles.bars}>
           <div className={styles.bar} />

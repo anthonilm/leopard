@@ -4,18 +4,18 @@ import React from 'react';
 import styles from './SystemSnapshot.module.css';
 
 const steps = [
-  { title: 'Targeted Performance Assessment', blurb: 'Isolate the bottlenecks.' },
-  { title: 'Evidence-Based Mental Skills', blurb: 'Methods that hold under pressure.' },
-  { title: 'Personalized Performance Plan', blurb: 'Step-by-step actions you can run.' },
-  { title: 'Accountability & Course Correction', blurb: 'Tight feedback loops.' },
-  { title: 'Crisis Prevention', blurb: 'Protect energy and attention before they fray.' },
-  { title: 'Performance Under Pressure', blurb: 'Prep for high-stakes moments.' },
+  { title: 'Performance Readiness', blurb: 'Be prepared for demanding situations, from daily challenges to high-stakes moments.' },
+  { title: 'Targeted Performance Assessment', blurb: 'Expose the precise gaps holding back your execution and output.' },
+  { title: 'Evidence-Based Cognitive and Behavioral Skills', blurb: 'Proven methods that hold under real-world demands.' },
+  { title: 'Personalized Optimization Plan', blurb: 'A high-efficiency, adaptive system engineered for your daily demands.' },
+  { title: 'Ongoing Support & Adjustment', blurb: 'Real-time feedback and refinements to keep your performance compounding.' },
+  { title: 'Habit Fortification', blurb: 'Fortify mental stamina and focus so they don’t erode when you need them most.' },
 ];
 
 export default function SystemSnapshot() {
   return (
     <section className={styles.section}>
-      <h2 className={styles.headline}>How it works</h2>
+      <h2 className={styles.headline}>The Noesis Approach</h2>
 
       <div className={styles.contentGrid}>
         {/* Left: stacked step tiles */}
@@ -33,37 +33,26 @@ export default function SystemSnapshot() {
 
         {/* Right: high-visibility paragraph */}
         <aside className={styles.infoPanel} aria-label="Who we work with and outcomes">
-          <p>
-            
-            We help high-performing students and professionals achieve and sustain optimum mental performance.
-            Our model blends cognitive psychology, behavioral science, executive consulting, and
-            operational insight to deliver consistent output, sharper decisions under pressure, and
-            measurable gains in well-being while reducing costly lapses in focus, engagement, and reliability.
-          </p>
-          <p>
-            We treat performance states as modifiable through precise tools, diagnostics, and protocols
-            targeting behavior, cognition, and relationships. This includes anxiety and depression management.
-            
-          </p>
-          <p>Our care targets three domains critical to day-to-day performance:</p>
-          <ul>
-            <li><strong>Organizational skills</strong> – creating clear, repeatable systems for work and life.</li>
-            <li><strong>Emotional regulation</strong> – maintaining composure and focus under pressure.</li>
-            <li><strong>Cognitive load management</strong> – preventing overwhelm and sustaining mental clarity.</li>
-          </ul>
-          <p>
-            These areas directly influence follow-through, performance under pressure, and long-term momentum.
-            Clients leave with refined systems they can apply daily—resulting in improved function, sustained
-            motivation, and enhanced quality of life.
-          </p>
-          <p>
-            We anchor our work in two core concepts: <strong>clarity</strong>—the ability to see, name, and
-            organize behavior with precision—and <strong>momentum</strong>—sustained, self-directed movement
-            toward desired outcomes. 
-            
-            This is mental health care: structured, measurable, and execution-focused.
-          </p>
-        </aside>
+  <p>
+    We help high-performing professionals build and sustain optimal mental performance. Our approach combines cognitive psychology, behavioral science, executive consulting, and operational insight to improve output, sharpen decisions, and strengthen well-being—while reducing lapses in focus, engagement, and reliability.
+  </p>
+  <p>
+    We view performance states as adjustable through targeted tools, diagnostics, and protocols addressing behavior, cognition, relationships, strategies for managing anxiety and depression, and movement efficiency.
+  </p>
+  <p>Our work focuses on three domains essential to daily performance:</p>
+  <ul>
+    <li><strong>Organizational skills</strong> – clear, repeatable systems for work and life.</li>
+    <li><strong>Emotional regulation</strong> – composure and focus under pressure.</li>
+    <li><strong>Cognitive load management</strong> – preventing overwhelm and maintaining clarity.</li>
+  </ul>
+  <p>
+    These skills directly impact follow-through and long-term momentum. Clients leave with systems and habits, leading to sustained motivation, improved function, and a higher quality of life.
+  </p>
+  <p>
+    We center our work on two principles: <strong>clarity</strong> –– seeing and organizing behavior –– and <strong>momentum</strong> –– consistent, self-directed progress toward meaningful goals. This is structure, measurable, execution-focused mental health support.
+  </p>
+</aside>
+
       </div>
     </section>
   );

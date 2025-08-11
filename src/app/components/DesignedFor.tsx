@@ -4,21 +4,22 @@ import React from 'react';
 import styles from './DesignedFor.module.css';
 
 const profiles = [
-  {
-    title: 'Students pushing for academic excellence',
-    description: 'Stay sharp, focused, and resilient through changing demands.',
-  },
+  
   {
     title: 'Executives operating at peak capacity',
-    description: 'Support endurance, precision, and critical thinking under pressure.',
+    description: 'Sustain clarity and decision quality under constant demand.',
   },
   {
-    title: 'Educators leading in demanding systems',
-    description: 'Avoid burnout while sustaining high-impact teaching and mentoring.',
+    title: 'Entrepreneurs and business owners',
+    description: 'Avoid burnout while managing complex, high-stakes responsibilities.',
   },
   {
     title: 'Young professionals building stability',
     description: 'Translate high potential into consistent, long-term performance.',
+  },
+  {
+    title: 'Students pushing for academic excellence',
+    description: 'Stay sharp, focused, and resilient through changing demands.',
   },
 ];
 

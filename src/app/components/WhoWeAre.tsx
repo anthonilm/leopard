@@ -26,40 +26,16 @@ const sections: {
   icon: JSX.Element;
 }[] = [
   {
-    title: 'Practice Ethos',
-    description:
-      'Structured mental performance care—not therapy, not mindset coaching. Built for execution, not reflection.',
-    icon: <Brain size={28} strokeWidth={1.5} />,
-  },
-  {
-    title: 'Model & Method',
-    description:
-      'Weekly sessions + IEPs built on COM-B behavior modeling and identity architecture.',
-    icon: <ClipboardList size={28} strokeWidth={1.5} />,
-  },
-  {
-    title: 'Access & Affordability',
-    description:
-      '$35/session with the first free. Virtual-first model lowers barriers and expands access.',
-    icon: <DollarSign size={28} strokeWidth={1.5} />,
-  },
-  {
     title: 'Performance Outcomes',
     description:
       'Progress is tracked by behavior—not mood—resulting in clarity, regulation, and traction.',
     icon: <TrendingUp size={28} strokeWidth={1.5} />,
   },
   {
-    title: 'Ethics & Integrity',
+    title: 'Practice Ethos',
     description:
-      'Culturally aware, identity-respecting, and designed to avoid clinical overreach.',
-    icon: <ShieldCheck size={28} strokeWidth={1.5} />,
-  },
-  {
-    title: 'Student & Family Support',
-    description:
-      'Tools for parents navigating student stress and behavioral friction—without waitlists.',
-    icon: <Users size={28} strokeWidth={1.5} />,
+      'Structured mental performance care—not therapy, not mindset coaching. Built for execution, not reflection.',
+    icon: <Brain size={28} strokeWidth={1.5} />,
   },
   {
     title: 'Supporting Marginalized Clients',
@@ -68,10 +44,34 @@ const sections: {
     icon: <Handshake size={28} strokeWidth={1.5} />,
   },
   {
+    title: 'Model & Method',
+    description:
+      'Weekly sessions + IEPs built on COM-B behavior modeling and identity architecture.',
+    icon: <ClipboardList size={28} strokeWidth={1.5} />,
+  },
+  {
     title: 'Strategic Vision',
     description:
       'A category-defining model at the intersection of clarity, behavior, and execution.',
     icon: <Target size={28} strokeWidth={1.5} />,
+  },
+  {
+    title: 'Access & Affordability',
+    description:
+      '$35/session with the first free. Virtual-first model lowers barriers and expands access.',
+    icon: <DollarSign size={28} strokeWidth={1.5} />,
+  },
+  {
+    title: 'Student & Family Support',
+    description:
+      'Tools for parents navigating student stress and behavioral friction—without waitlists.',
+    icon: <Users size={28} strokeWidth={1.5} />,
+  },
+  {
+    title: 'Ethics & Integrity',
+    description:
+      'Culturally aware, identity-respecting, and designed to avoid clinical overreach.',
+    icon: <ShieldCheck size={28} strokeWidth={1.5} />,
   },
 ];
 
