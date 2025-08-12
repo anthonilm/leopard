@@ -34,12 +34,12 @@ export default function SystemSnapshot() {
         {/* Right: high-visibility paragraph */}
         <aside className={styles.infoPanel} aria-label="Who we work with and outcomes">
   <p>
-    We help high-performing professionals build and sustain optimal mental performance. Our approach combines cognitive psychology, behavioral science, executive consulting, and operational insight to improve output, sharpen decisions, and strengthen well-being—while reducing lapses in focus, engagement, and reliability.
+    I specilize in helping high-performing professionals build and sustain optimal mental performance. My approach combines cognitive psychology, behavioral science, executive consulting, and operational insight to improve output, sharpen decisions, and strengthen well-being—while reducing lapses in focus, engagement, and reliability.
   </p>
   <p>
-    We view performance states as adjustable through targeted tools, diagnostics, and protocols addressing behavior, cognition, relationships, strategies for managing anxiety and depression, and movement efficiency.
+    I view performance states as adjustable through targeted tools, diagnostics, and protocols addressing behavior, cognition, relationships, strategies for managing anxiety and depression, and movement efficiency.
   </p>
-  <p>Our work focuses on three domains essential to daily performance:</p>
+  <p>Our work will focus on three domains essential to daily performance:</p>
   <ul>
     <li><strong>Organizational skills</strong> – clear, repeatable systems for work and life.</li>
     <li><strong>Emotional regulation</strong> – composure and focus under pressure.</li>
@@ -49,7 +49,7 @@ export default function SystemSnapshot() {
     These skills directly impact follow-through and long-term momentum. Clients leave with systems and habits, leading to sustained motivation, improved function, and a higher quality of life.
   </p>
   <p>
-    We center our work on two principles: <strong>clarity</strong> –– seeing and organizing behavior –– and <strong>momentum</strong> –– consistent, self-directed progress toward meaningful goals. This is structure, measurable, execution-focused mental health support.
+    There are two principles at the center of our work: <strong>clarity</strong> –– seeing and organizing behavior –– and <strong>momentum</strong> –– consistent, self-directed progress toward meaningful goals. This is structure, measurable, execution-focused mental health support.
   </p>
 </aside>
 

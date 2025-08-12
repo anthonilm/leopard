@@ -102,3 +102,23 @@
   letter-spacing: 0.2px;
   line-height: 1.6;
 }
+/* CTA button for PayPal checkout */
+.ctaButton {
+  margin-top: 1.25rem;
+  display: inline-block;
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background-color: #e4d3aa; /* hero text color as button bg */
+  color: #0f3832;            /* hero dark green as text */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  opacity: 0.95;
+}
