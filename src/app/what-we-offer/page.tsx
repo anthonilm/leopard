@@ -4,6 +4,39 @@ import React from 'react';
 import styles from './WhatWeOffer.module.css';
 import Image from 'next/image';
 
+const areasIHelpWith = [
+  'Executive Burnout',
+  'Decision Fatigue',
+  'Workload Overwhelm',
+  'Performance Anxiety',
+  'Focus and Concentration',
+  'Procrastination Patterns',
+  'Stress Management',
+  'Cognitive Endurance',
+  'Sleep Optimization',
+  'Resilience Building',
+  'Energy Management',
+  'Adaptability in Change',
+  'Role Transition Stress',
+  'Leadership Pressure',
+  'Communication Under Stress',
+  'Conflict Navigation',
+  'Strategic Thinking Blocks',
+  'Goal Execution Challenges',
+  'Mental Recovery After Setbacks',
+  'Overcommitment Recovery',
+  'High-Stakes Presentation Nerves',
+  'Emotional Regulation in Work',
+  'Decision-Making Clarity',
+  'Time and Priority Management',
+  'Maintaining Motivation',
+  'Preventing Cognitive Overload',
+  'Work-Life Integration',
+  'Handling Critical Feedback',
+  'Sustaining Peak Performance',
+  'Behavioral Habit Rebuilding',
+];
+
 const sections = {
   Services: [
     {
@@ -42,6 +75,18 @@ export default function WhatWeOfferPage() {
   return (
     <main className={styles.wrapper}>
       <h1 className={styles.heading}>What We Offer</h1>
+
+      {/* Areas I Help With */}
+      <section className={styles.areasSection}>
+        <h2 className={styles.subheading}>Areas I Help With</h2>
+        <div className={styles.areasGrid}>
+          {areasIHelpWith.map((area, idx) => (
+            <div key={idx} className={styles.areaItem}>
+              {area}
+            </div>
+          ))}
+        </div>
+      </section>
 
       {Object.entries(sections).map(([category, items]) => (
         <div key={category}>

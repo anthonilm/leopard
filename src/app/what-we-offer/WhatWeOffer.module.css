@@ -1,3 +1,4 @@
+/* Wrapper */
 .wrapper {
   min-height: 100vh;
   background: linear-gradient(to bottom, #f3ecdc, #ffffff); /* bone to white */
@@ -5,57 +6,99 @@
   font-family: var(--font-geist-sans);
 }
 
+/* Headings */
 .heading {
   font-size: 2.5rem;
   font-family: var(--font-cormorant);
-  color: #f3ecdc; /* bone text on white */
+  color: #111;
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-/* Scroll container per category */
+/* Tile container – centered rows */
 .scrollContainer {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  justify-content: center;   /* center tiles horizontally */
+  align-items: stretch;
+  flex-wrap: wrap;            /* wrap to multiple rows */
   gap: 2rem;
   padding-bottom: 3rem;
+  scrollbar-width: none;
 }
+.scrollContainer::-webkit-scrollbar { display: none; }
 
-/* Tile style */
+/* Tiles – hero colors, fully centered text, no image space */
 .tile {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  flex: 0 1 340px;
+  background-color: #0f3832; /* hero dark green */
+  color: #e4d3aa;            /* hero text color */
+  border: none;
   border-radius: 12px;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease;
+  justify-content: center;    /* center vertically */
+  align-items: center;        /* center horizontally */
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 240px;          /* compact, consistent height */
 }
 
 .tile:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-.tile img {
-  border-radius: 8px;
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
+/* Tile typography */
 .tile h2 {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-family: var(--font-cormorant);
-  color: #111;
-  margin-bottom: 0.5rem;
+  color: #e4d3aa;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
 .tile p {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 1.05rem;
+  color: #e4d3aa;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 28ch;
+}
+
+/* “Areas I Help With” section */
+.areasSection {
+  background: linear-gradient(to bottom, #f3ecdc, #ffffff); /* bone to white */
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.subheading {
+  font-size: 2rem;
+  font-family: var(--font-cormorant);
+  color: #111;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.areasGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem 2rem;
+}
+
+.areaItem {
+  font-size: 1.05rem;
+  color: #222;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 0.4rem;
+  letter-spacing: 0.2px;
+  line-height: 1.6;
 }
