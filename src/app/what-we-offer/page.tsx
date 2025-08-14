@@ -20,25 +20,25 @@ const sections = {
     {
       title: '1:1 Coaching',
       description: 'Direct performance sessions focused on decision-making, recovery, and behavioral stability.',
-      checkoutUrl: '#', // replace with your PayPal link
+      checkoutUrl: 'https://www.paypal.com/ncp/payment/R2K8FTNDEH928',
       ctaText: 'Lock it in.',
     },
     {
       title: 'Behavioral Diagnostics',
       description: 'Get mapped using our COM-B-based assessment to understand what’s helping and what’s blocking you.',
-      checkoutUrl: '#', // replace with your PayPal link
+      checkoutUrl: 'https://www.paypal.com/ncp/payment/V65JZBVSQJ594',
       ctaText: 'Lock it in.',
     },
     {
       title: '6-Session Package – $400',
       description: 'Includes COM-B assessment, Individualized Executive Plan (IEP), and access to physical movement facilities such as yoga.',
-      checkoutUrl: '#', // replace with your PayPal link
+      checkoutUrl: 'https://www.paypal.com/ncp/payment/KMQK6HTCMY7CQ',
       ctaText: 'Lock it in.',
     },
     {
       title: '3-Session Package – $200',
       description: 'Includes COM-B assessment, Individualized Executive Plan (IEP), and access to physical movement facilities such as yoga.',
-      checkoutUrl: '#', // replace with your PayPal link
+      checkoutUrl: 'https://www.paypal.com/ncp/payment/KN9RGNWTMTEWQ',
       ctaText: 'Lock it in.',
     },
   ],
@@ -46,13 +46,13 @@ const sections = {
     {
       title: 'Field Manual',
       description: 'A structured workbook to track performance, barriers, and gains over time.',
-      checkoutUrl: '#', // replace with your PayPal link
+      checkoutUrl: '#', // add PayPal link when ready
       ctaText: 'Lock it in.',
     },
     {
       title: 'Pocket Routine Cards',
       description: 'Carry structured tools to ground yourself and reboot focus mid-day.',
-      checkoutUrl: '#', // replace with your PayPal link
+      checkoutUrl: '#', // add PayPal link when ready
       ctaText: 'Lock it in.',
     },
   ],
@@ -60,7 +60,7 @@ const sections = {
     {
       title: 'Performance Mastery (Coming Soon)',
       description: 'A reference guide to behavioral infrastructure and executive resilience.',
-      checkoutUrl: '#', // replace with your PayPal link
+      checkoutUrl: '#', // add PayPal link when ready
       ctaText: 'Lock it in.',
     },
   ],
