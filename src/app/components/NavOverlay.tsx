@@ -47,6 +47,7 @@ export default function NavOverlay() {
             <nav className={styles.menuLinks}>
               <button onClick={() => handleNavigate('/')}>Home</button>
               <button onClick={() => handleNavigate('/what-we-offer')}>Services</button>
+              <button onClick={() => handleNavigate('/students')}>For Students</button>
               <button
                 onClick={() => {
                   setContactOpen(true);

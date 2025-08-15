@@ -17,7 +17,14 @@ export default function Hero() {
         </div>
         <h1 className={styles.noesis}>NOESIS</h1>
       </div>
-      <p className={styles.tagline}>PERFORM BETTER. RECOVER FASTER. <br /> REST EASY.</p>
+      <p className={styles.tagline}>
+        PERFORM BETTER. RECOVER FASTER. <br /> REST EASY.
+      </p>
+
+      {/* Credentials just below tagline */}
+      <div className={styles.credentials}>
+        Anthoni McElrath, M.S., Ph.D. Licensed Integrative Mental Health Coach
+      </div>
     </section>
   );
 }

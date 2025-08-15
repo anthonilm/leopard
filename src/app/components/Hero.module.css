@@ -62,3 +62,11 @@
   margin-top: 2rem;
   line-height: 1.6;
 }
+.credentials {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: var(--font-geist-sans), sans-serif;
+  color: #e4d3aa; /* match hero text color */
+  letter-spacing: 0.5px;
+  text-align: center;
+}
