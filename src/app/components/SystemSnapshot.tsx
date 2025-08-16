@@ -4,12 +4,12 @@ import React from 'react';
 import styles from './SystemSnapshot.module.css';
 
 const steps = [
-  { title: 'Performance Readiness', blurb: 'Be prepared for demanding situations, from daily challenges to high-stakes moments.' },
-  { title: 'Targeted Performance Assessment', blurb: 'Expose the precise gaps holding back your execution and output.' },
-  { title: 'Evidence-Based Cognitive and Behavioral Skills', blurb: 'Proven methods that hold under real-world demands.' },
-  { title: 'Personalized Optimization Plan', blurb: 'A high-efficiency, adaptive system engineered for your daily demands.' },
-  { title: 'Ongoing Support & Adjustment', blurb: 'Real-time feedback and refinements to keep your performance compounding.' },
-  { title: 'Habit Fortification', blurb: 'Fortify mental stamina and focus so they don’t erode when you need them most.' },
+  { title: 'Performance Readiness', blurb: 'Be mentally prepared for demanding situations, from daily challenges to high-stakes moments.' },
+  { title: 'Targeted Performance Assessment', blurb: 'Identify the precise mental and emotional factors holding back your execution and output.' },
+  { title: 'Evidence-Based Cognitive and Behavioral Skills', blurb: 'Train mental strategies and behavioral tools that hold under real-world demands.' },
+  { title: 'Personalized Optimization Plan', blurb: 'Aligns coping strategies and focus techniques to your individual needs.' },
+  { title: 'Ongoing Support & Adjustment', blurb: 'Real-time feedback and refinements to keep your mental and behavorial performance compounding.' },
+  { title: 'Habit Fortification', blurb: 'Prevent burnout and safeguard mental well-being when demands are highest.' },
 ];
 
 export default function SystemSnapshot() {
@@ -34,7 +34,7 @@ export default function SystemSnapshot() {
         {/* Right: high-visibility paragraph */}
         <aside className={styles.infoPanel} aria-label="Who we work with and outcomes">
   <p>
-    I specilize in helping high-performing professionals build and sustain optimal mental performance. My approach combines cognitive psychology, behavioral science, executive consulting, and operational insight to improve output, sharpen decisions, and strengthen well-being—while reducing lapses in focus, engagement, and reliability.
+    I specilize in helping people achieve and sustain optimal mental performance. My approach combines cognitive psychology, behavioral science, executive consulting, and operational insight to improve output, sharpen decisions, and strengthen well-being—while reducing lapses in focus, engagement, and reliability.
   </p>
   <p>
     I view performance states as adjustable through targeted tools, diagnostics, and protocols addressing behavior, cognition, relationships, strategies for managing anxiety and depression, and movement efficiency.

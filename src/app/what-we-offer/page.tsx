@@ -42,20 +42,6 @@ const sections = {
       ctaText: 'Lock it in.',
     },
   ],
-  Products: [
-    {
-      title: 'Field Manual',
-      description: 'A structured workbook to track performance, barriers, and gains over time.',
-      checkoutUrl: '#', // add PayPal link when ready
-      ctaText: 'Lock it in.',
-    },
-    {
-      title: 'Pocket Routine Cards',
-      description: 'Carry structured tools to ground yourself and reboot focus mid-day.',
-      checkoutUrl: '#', // add PayPal link when ready
-      ctaText: 'Lock it in.',
-    },
-  ],
   Books: [
     {
       title: 'Performance Mastery (Coming Soon)',

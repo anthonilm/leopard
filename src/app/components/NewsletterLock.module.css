@@ -1,0 +1,162 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  background: linear-gradient(180deg, #1f1f1f, #0a0a0a);
+  color: #e7e4de;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border-top: 1px solid rgba(231, 228, 222, 0.08);
+  scroll-margin-top: 8vh;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(31,31,31,0.95), rgba(10,10,10,0.6));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(231, 228, 222, 0.06);
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.title {
+  font-family: "Suisse Intl", "Neue Haas Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: clamp(20px, 2vw, 28px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.kicker {
+  font-family: "Public Sans", "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  opacity: 0.8;
+}
+
+/* Locked vertical scroller */
+.scroller {
+  height: calc(100vh - 112px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(231,228,222,0.35) transparent;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 10px;
+}
+.scroller::-webkit-scrollbar-thumb {
+  background: rgba(231, 228, 222, 0.35);
+  border-radius: 8px;
+}
+.scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Each issue is a snap pane */
+.card {
+  scroll-snap-align: start;
+  min-height: calc(100vh - 112px);
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid rgba(231, 228, 222, 0.06);
+}
+
+.cardInner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(231, 228, 222, 0.7);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.index {
+  display: inline-block;
+  min-width: 2ch;
+  font-variant-numeric: tabular-nums;
+  color: #b14a2a;
+}
+
+.date {
+  opacity: 0.9;
+}
+
+.cardTitle {
+  margin: 14px 0 10px 0;
+  font-family: "Suisse Intl", "Neue Haas Grotesk", system-ui, -apple-system;
+  font-size: clamp(28px, 4.5vw, 48px);
+  line-height: 1.04;
+  letter-spacing: 0.01em;
+}
+
+.summary {
+  margin: 8px 0 24px 0;
+  font-family: "Public Sans", "IBM Plex Sans", system-ui, -apple-system;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.6;
+  color: rgba(231, 228, 222, 0.92);
+}
+
+.actions {
+  display: flex;
+}
+
+.link {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #2a2a2a, #1b1b1b);
+  color: #e7e4de;
+  text-decoration: none;
+  border: 1px solid rgba(231, 228, 222, 0.14);
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(231, 228, 222, 0.28);
+}
+.link:active {
+  transform: translateY(0);
+}
+
+
+
+.unlock {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Public Sans", "IBM Plex Sans", system-ui;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #e7e4de;
+  background: transparent;
+  border: 1px solid rgba(231, 228, 222, 0.18);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 12px 24px;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.unlock:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(231, 228, 222, 0.26);
+}

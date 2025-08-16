@@ -28,19 +28,19 @@ const sections: {
   {
     title: 'Practice Ethos',
     description:
-      'Structured mental performance care—not therapy, not mindset coaching. Built for execution, not reflection.',
+      'Mental stamina and stress tolerance for high-stakes demands—structured care that builds resilience, not just willpower.',
     icon: <Brain size={28} strokeWidth={1.5} />,
   },
   {
     title: 'Model & Method',
     description:
-      'Weekly sessions + IEPs built on COM-B behavior modeling and identity architecture.',
+      'Weekly sessions + IEPs built on COM-B behavior modeling to pinpoint gaps limiting execution.',
     icon: <ClipboardList size={28} strokeWidth={1.5} />,
   },
   {
     title: 'Access & Affordability',
     description:
-      '$35/session with the first free. Virtual-first model lowers barriers and expands access.',
+      '$90 /session with the first free.',
     icon: <DollarSign size={28} strokeWidth={1.5} />,
   },
   {

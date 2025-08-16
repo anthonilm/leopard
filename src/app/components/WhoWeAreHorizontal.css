@@ -1,15 +1,15 @@
-/* Root section (same visual gradient/colors) */
+/* Root section */
 .who-we-are-section--horizontal {
-  padding: 4rem 2rem;
-  background-color: #113734; /* updated to solid match with System Snapshot end */
+  padding: 3rem 1.5rem; /* was 4rem 2rem */
+  background-color: #113734;
   color: #e4d3aa;
 }
 
 /* Headline */
 .who-headline--horizontal {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 1.875rem; /* was 2.5rem */
+  margin-bottom: 1.5rem; /* was 2rem */
   font-family: var(--font-geist-sans), sans-serif;
   color: #e4d3aa;
 }
@@ -19,15 +19,15 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
-  column-gap: 2rem;
+  column-gap: 1.5rem; /* was 2rem */
   overflow-x: auto;
   overflow-y: hidden;
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem; /* was 1rem */
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Each group becomes a snap-aligned column item */
+/* Each group */
 .section-group--horizontal {
   display: flex;
   flex-direction: column;
@@ -38,21 +38,21 @@
 
 /* Title above each tile */
 .section-title--horizontal {
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* was 1.5rem */
   font-weight: 600;
   color: #e4d3aa;
   font-family: var(--font-geist-sans), sans-serif;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0; /* was 1rem */
 }
 
-/* Tile block (same look) */
+/* Tile block */
 .section-tile--horizontal {
-  width: 280px;
-  height: 280px;
+  width: 210px;   /* was 280px */
+  height: 210px;  /* was 280px */
   background-color: rgba(255, 255, 255, 0.04);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 1.125rem; /* was 1.5rem */
+  border-radius: 0.75rem; /* was 1rem */
+  box-shadow: 0 1.5px 9px rgba(0, 0, 0, 0.2); /* ~75% */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -63,20 +63,20 @@
 
 .section-tile--horizontal:hover {
   background-color: rgba(255, 255, 255, 0.08);
-  transform: translateY(-4px);
+  transform: translateY(-3px); /* was -4px */
 }
 
 /* Icon inside tile */
 .tile-icon--horizontal {
-  font-size: 2rem;
+  font-size: 1.5rem; /* was 2rem */
   color: #e4d3aa;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.375rem; /* was 0.5rem */
 }
 
 /* Tile text */
 .section-tile--horizontal p {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 0.675rem; /* was 0.9rem */
+  line-height: 1.35;
   color: #e4d3aa;
   font-family: var(--font-geist-sans), sans-serif;
 }
@@ -86,11 +86,11 @@
   background-color: transparent;
   border: 1px solid #e4d3aa;
   color: #e4d3aa;
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.375rem 0.75rem; /* was 0.5rem 1rem */
+  font-size: 0.6375rem;      /* was 0.85rem */
   text-transform: uppercase;
   font-family: var(--font-geist-sans), sans-serif;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.075em;   /* was 0.1em */
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
 }
@@ -100,18 +100,18 @@
   color: #113734;
 }
 
-/* CTA button inside modal (kept for parity with original) */
+/* CTA button inside modal */
 .book-button {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1.5rem; /* was 2rem */
   background-color: #e4d3aa;
   color: #113734;
-  padding: 0.6rem 1.2rem;
+  padding: 0.45rem 0.9rem; /* was 0.6rem 1.2rem */
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 0.5rem;
-  font-size: 0.9rem;
+  border-radius: 0.375rem; /* was 0.5rem */
+  font-size: 0.675rem; /* was 0.9rem */
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -120,9 +120,9 @@
   color: #113734;
 }
 
-/* Responsive: allow row to scroll on small screens with same tile sizes */
+/* Responsive */
 @media (max-width: 768px) {
   .who-headline--horizontal {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.125rem; /* was 1.5rem */
   }
 }
