@@ -31,11 +31,7 @@ const tutoringTopics: string[] = [
 
 const sections = {
   'Student Services': [
-    {
-      title: 'Tutoring',
-      description:
-        'Course support and exam prep using retrieval practice, spaced repetition, and worked examples.',
-    },
+    
     {
       title: 'Organization',
       description:

@@ -127,3 +127,10 @@
   font-family: var(--font-geist-sans), sans-serif;
   font-size: 2.5rem;
 }
+/* Centers the text and the block */
+.promoHeadline {
+  text-align: center;        /* center the text */
+  max-width: 72ch;           /* readable line length */
+  margin: 0 auto 2rem;       /* centers the block and adds bottom space */
+  line-height: 1.2;          /* tidy rhythm */
+}
