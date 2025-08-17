@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './Students.module.css';
 
 const tutoringTopics: string[] = [
@@ -105,6 +106,17 @@ function StudentSystemSnapshot() {
 export default function StudentsPage() {
   return (
     <main className={styles.wrapper}>
+      {/* Parent-focused promo headline */}
+      <motion.h1
+        className={styles.promoHeadline}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Give your student a weekly performance system that improves behavior and discipline, grows generativity and creativity, and supports mental health—book a consult today.
+      </motion.h1>
+
       <h1 className={styles.heading}>Tutoring Topics</h1>
 
       {/* Tutoring Topics */}

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './WhatWeOffer.module.css';
 
 const areasIHelpWith = [
@@ -55,6 +56,17 @@ const sections = {
 export default function WhatWeOfferPage() {
   return (
     <main className={styles.wrapper}>
+      {/* Promo headline */}
+      <motion.h1
+        className={styles.promoHeadline}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Reduce burnout, sharpen discipline, and expand generativity and creativity with a weekly performance system—choose your plan and get to work.
+      </motion.h1>
+
       <h1 className={styles.heading}></h1>
 
       {/* Areas I Help With */}

@@ -8,6 +8,7 @@ import WhoWeAreHorizontal from './components/WhoWeAreHorizontal';
 import EmailSignup from './components/EmailSignup';
 import AnimatedSection from './components/AnimatedSection';
 import NewsletterLock from './components/NewsletterLock';
+import SiteFooter from './components/SiteFooter'; // already created
 
 const newsletterItems = [
   {
@@ -63,6 +64,7 @@ const newsletterItems = [
 export default function Home() {
   return (
     <main className="sogolon-home">
+      {/* Main site stack with gradient */}
       <div
         style={{
           background:
@@ -98,6 +100,11 @@ export default function Home() {
           <EmailSignup />
         </AnimatedSection>
       </div>
+
+      {/* Separate footer section */}
+      <section aria-label="Legal disclaimer section">
+        <SiteFooter />
+      </section>
     </main>
   );
 }

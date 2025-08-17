@@ -252,3 +252,31 @@
   color: inherit;
   min-height: 100dvh;
 }
+/* Parent-focused promo headline (matches WhoWeAre headline style) */
+.promoHeadline {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-family: var(--font-geist-sans), sans-serif;
+  color: #e4d3aa; /* same color used in WhoWeAre headline */
+}
+/* Parent promo sentence — match HERO background color */
+.promoHeadline {
+  color: #0f3832 !important; /* use #113734 if you prefer the lower gradient tone */
+}
+/* Full-page background: bone → white */
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f3ecdc 0%, #ffffff 100%);
+  /* keep your existing padding if you already set it; otherwise: */
+  padding: 4rem 2rem;
+}
+
+/* Optional: give the "Tutoring Topics" block a soft bone → white panel */
+.areasSection {
+  background: linear-gradient(to bottom, #f3ecdc, #ffffff);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
