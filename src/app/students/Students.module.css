@@ -280,3 +280,43 @@
   margin-bottom: 4rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
+/* How Tutoring Works paragraph – keep typography consistent */
+.howItWorks {
+  max-width: 900px;
+  margin: 0 auto 2rem auto; /* centered, with spacing above CTA */
+}
+
+.howText {
+  margin: 0;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  color: inherit; /* uses page text color */
+}
+/* Center the single hover tile and match tile visuals */
+.howItWorks {
+  margin: 0 auto 2rem auto;
+  max-width: 1100px;
+}
+
+.howTile {
+  /* reuses .tile visuals; just control width/centering */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 980px;
+  padding: 1.5rem 1.75rem; /* a bit roomier for paragraph */
+}
+
+.howText {
+  margin: 0;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+  font-size: 1rem;         /* consistent with page text */
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  color: inherit;
+}
+/* Extra space between SystemSnapshot and How Tutoring Works */
+.howItWorks {
+  margin-top: 3rem; /* adjust to taste: 2–4rem */
+}

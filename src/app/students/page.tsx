@@ -148,6 +148,20 @@ export default function StudentsPage() {
 
       <StudentSystemSnapshot />
 
+      {/* How tutoring works (hover tile) */}
+      <section className={styles.howItWorks} aria-label="How tutoring works">
+        <div className={`${styles.tile} ${styles.howTile}`}>
+          <h2>How Tutoring Works</h2>
+          <p className={styles.howText}>
+            Tutoring runs online via secure video with screen sharing. We start with a brief COM-B assessment to map each
+            student’s Capability, Opportunity, and Motivation, then set goals and a weekly study plan. Each session
+            includes a quick progress check, targeted instruction, guided practice with immediate feedback, and a short
+            assignment calibrated to the COM-B profile. Materials and homework live in a shared folder, and progress is
+            tracked with simple metrics (accuracy, time-on-task, completion). Parent check-ins are available on request.
+          </p>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className={styles.bottomCtaSection}>
         <a href="/book-session" className={styles.ctaButton}>
