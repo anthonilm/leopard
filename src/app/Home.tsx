@@ -16,7 +16,7 @@ const newsletterItems = [
     dateISO: '2025-04-01',
     summary:
       'Analyzes the systemic erosion of symbolic and performance intelligence in U.S. society, framing cultural, political, and ecological breakdown as neurocognitive disorganization.',
-    href: '/newsletters/interpolated-instability.pdf',
+    href: '/newsletters/2025-04-01-interpolated-instability.pdf',
   },
   {
     id: 'disidentification-architecture',
@@ -24,7 +24,7 @@ const newsletterItems = [
     dateISO: '2025-07-01',
     summary:
       'Defines disidentification as the structural intervention necessary to dismantle maladaptive identities and restore continuity, coherence, and authentic presence.',
-    href: '/newsletters/disidentification-architecture.pdf',
+    href: '/newsletters/2025-07-01-disidentification-architecture.pdf',
   },
   {
     id: 'solitary-threshold',
@@ -32,7 +32,7 @@ const newsletterItems = [
     dateISO: '2025-03-01',
     summary:
       'Explores solo travel as a symbolic threshold for re-entering motion, presence, and coherence, countering depressive stasis through environmental engagement and agency.',
-    href: '/newsletters/solitary-threshold.pdf',
+    href: '/newsletters/2025-03-01-solitary-threshold.pdf',
   },
   {
     id: 'structural-disintegration',
@@ -40,7 +40,7 @@ const newsletterItems = [
     dateISO: '2025-06-01',
     summary:
       'Frames instability as the collapse of integrative capacity across thought, affect, and behavior, emphasizing the need for systemic repair and relational coherence.',
-    href: '/newsletters/instability-structural-disintegration.pdf',
+    href: '/newsletters/2025-06-01-instability-structural-disintegration.pdf',
   },
   {
     id: 'belief-psychological-structure',
@@ -48,7 +48,15 @@ const newsletterItems = [
     dateISO: '2025-05-15',
     summary:
       'Defines belief as the internal architecture of coherence that sustains identity and continuity under pressure, contrasting adaptive drift with integrated orientation.',
-    href: '/newsletters/belief-psychological-structure.pdf',
+    href: '/newsletters/2025-05-15-belief-psychological-structure.pdf',
+  },
+  {
+    id: 'illegible-subject',
+    title: 'The Illegible Subject: Cognitive Imbalance, Relational Exile, and the Ethics of Repair',
+    dateISO: '2025-08-10',
+    summary:
+      'Explores cognitive imbalance where performance outpaces reflection, framing it as relational exile that calls for symbolic rehabilitation and trauma-informed environments.',
+    href: '/newsletters/2025-08-10-illegible-subject.pdf',
   },
 ];
 

@@ -166,9 +166,18 @@ export default function NewsletterLock({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [activeLock]);
 
+  // Chronological order (newest first), then format the date label
+  const sorted = useMemo(
+    () =>
+      [...items].sort(
+        (a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime()
+      ),
+    [items]
+  );
+
   const formatted = useMemo(
     () =>
-      items.map((n) => ({
+      sorted.map((n) => ({
         ...n,
         dateLabel: new Date(n.dateISO).toLocaleDateString(undefined, {
           year: "numeric",
@@ -176,7 +185,7 @@ export default function NewsletterLock({
           day: "numeric",
         }),
       })),
-    [items]
+    [sorted]
   );
 
   return (
@@ -242,9 +251,7 @@ export default function NewsletterLock({
           type="button"
           onClick={() => setActiveLock(false)}
           aria-label="Exit locked scroll"
-        >
-          
-        </button>
+        ></button>
       </footer>
     </section>
   );
