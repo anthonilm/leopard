@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';   // ✅ Added import
 import styles from './WhatWeOffer.module.css';
 
 const areasIHelpWith = [
@@ -90,14 +91,12 @@ export default function WhatWeOfferPage() {
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
                 {item.checkoutUrl && (
-                  <a
-                    href={item.checkoutUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/schedule?pay=${encodeURIComponent(item.checkoutUrl)}`}
                     className={styles.ctaButton}
                   >
                     {item.ctaText || 'Lock it in.'}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}

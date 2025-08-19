@@ -1,0 +1,548 @@
+/* Page background + scoped theme tokens with strong contrast */
+.page {
+  --navy: #0b2545;
+  --navy-700: #1a2f4f;
+  --ivory: #f6f4ee;
+  --bone: #efe9df;     /* slightly lighter for contrast */
+  --carbon: #0d0f10;
+
+  --grid-max: 1440px;
+  --gutter: 24px;
+  --col: minmax(0, 1fr);
+
+  min-height: 100dvh;
+  background-color: #e4d3aa; /* solid: match hero text color */
+  color: var(--bone);
+}
+
+/* Grid containers */
+.container,
+.sectionGrid {
+  width: 100%;
+  max-width: var(--grid-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(12, var(--col));
+  gap: var(--gutter);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 72vh; /* a bit tighter since CTAs removed */
+  display: grid;
+  place-items: center;
+  padding: 10vh 0 12vh;
+}
+
+.heroInner {
+  width: 100%;
+  max-width: var(--grid-max);
+  padding: 0 var(--gutter);
+  text-align: center;
+}
+
+.heroTitle {
+  margin: 0 0 16px 0;
+  letter-spacing: 0.02em;
+  line-height: 0.92;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: clamp(48px, 10vw, 140px); /* larger for readability */
+  color: var(--bone);
+}
+
+.heroTitle span { display: block; }
+
+/* Professional subline under ABOUT */
+.heroSubline {
+  margin: 8px auto 0;
+  font-weight: 600;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.92); /* strong contrast over navy */
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+  background: transparent;
+}
+
+.sectionTitle {
+  grid-column: 2 / span 4;
+  color: var(--bone);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  font-size: clamp(18px, 2vw, 22px); /* bigger */
+}
+
+.sectionBody {
+  grid-column: 6 / span 6;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(18px, 1.9vw, 20px); /* bigger body for legibility */
+  line-height: 1.75;                   /* more leading for long copy */
+}
+
+.sectionBody p { margin: 0 0 18px; }
+
+.sectionBody ol,
+.sectionBody ul {
+  margin: 0 0 18px 20px;
+  display: grid;
+  gap: 10px;
+}
+
+/* Related / cards — flips to dark text for contrast on light bg */
+.related {
+  padding: 72px 0 104px;
+  background: linear-gradient(180deg, transparent 0%, rgba(246, 244, 238, 0.18) 35%, var(--ivory) 100%);
+  color: var(--carbon);
+}
+
+.cards {
+  grid-column: 2 / span 10;
+  display: grid;
+  grid-template-columns: repeat(12, var(--col));
+  gap: var(--gutter);
+}
+
+.card {
+  grid-column: span 4;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(13, 15, 16, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: #6b6e73;
+}
+
+.cardHeading {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--carbon);
+  margin: 0;
+}
+
+.cardDesc {
+  margin: 0;
+  color: #3a3d41;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* use darker link for accessibility on light background */
+.cardLink {
+  margin-top: 6px;
+  color: #0b2545; /* navy */
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sectionTitle { grid-column: 2 / span 10; margin-bottom: 12px; }
+  .sectionBody { grid-column: 2 / span 10; }
+  .card { grid-column: span 6; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding-top: 14vh; }
+  .cards { grid-column: 1 / -1; }
+  .card { grid-column: span 12; }
+}
+.sectionGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* left = title, right = content */
+  gap: 40px;
+  align-items: stretch; /* stretch to equal height */
+}
+
+/* LEFT: Big Title Block */
+.sectionTitle {
+  grid-column: 1 / 2;
+  display: flex;
+  align-items: center;       /* vertically center text */
+  justify-content: center;   /* center horizontally */
+  text-align: center;
+
+  font-size: clamp(28px, 4vw, 48px); /* much bigger */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+
+  color: var(--bone);
+  padding: 20px;
+}
+
+/* RIGHT: Body */
+.sectionBody {
+  grid-column: 2 / 3;
+  font-size: clamp(18px, 1.9vw, 20px);
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Light variant for ivory background */
+.light .sectionTitle,
+.light .sectionBody {
+  color: var(--carbon);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sectionGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .sectionTitle {
+    font-size: clamp(22px, 6vw, 32px);
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+/* Page safety: prevent horizontal scroll caused by wide grids */
+.page {
+  overflow-x: hidden;
+}
+
+/* Container padding scales with viewport so text never hits the edge */
+.container,
+.sectionGrid {
+  max-width: min(var(--grid-max), 100%);
+  padding: 0 clamp(16px, 4vw, var(--gutter));
+}
+
+/* --- Sections --- */
+
+/* Use minmax to allow columns to shrink safely instead of overflowing */
+.sectionGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* LEFT: Big Title Block (kept bold; black-ish via text-dark) */
+.sectionTitle {
+  color: var(--text-dark);          /* keep bold black look */
+  background: color-mix(in oklab, var(--white) 60%, var(--pastel-blue) 40%);
+  border: 1px solid var(--silver);
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 48px);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* RIGHT: Body text (bold, black, wraps safely) */
+.sectionBody {
+  color: var(--text-dark);          /* keep bold black */
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 20px);
+  line-height: 1.7;
+  overflow-wrap: anywhere;          /* prevent right-edge overflow */
+  word-break: normal;
+  hyphens: auto;
+  max-width: 70ch;                  /* readable line length; prevents edge clipping */
+}
+
+/* Hero title: cap size a bit tighter on small screens to avoid clipping */
+.heroTitle {
+  color: var(--text-dark);
+  font-weight: 800;
+  font-size: clamp(40px, 9vw, 120px);
+}
+
+/* Mobile / tablet tightening */
+@media (max-width: 1024px) {
+  .sectionGrid {
+    grid-template-columns: 1fr;     /* stack cleanly */
+    gap: 24px;
+  }
+  .sectionTitle {
+    text-align: left;
+    justify-content: flex-start;
+    font-size: clamp(22px, 6vw, 32px);
+  }
+  .sectionBody {
+    max-width: none;                /* use full width when stacked */
+  }
+}
+
+/* Ultra-small devices: keep padding comfortable */
+@media (max-width: 420px) {
+  .container,
+  .sectionGrid {
+    padding: 0 16px;
+  }
+}
+/* --- Page background with soft smoke & seafoam layering --- */
+.page {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background-color: #e4d3aa; /* solid: match hero text color (no gradients) */
+  color: #0d0f10;
+}
+
+/* Container padding scales with viewport */
+.container,
+.sectionGrid {
+  max-width: min(1440px, 100%);
+  padding: 0 clamp(16px, 4vw, 24px);
+}
+
+/* Grid and text styling */
+.sectionGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 40px;
+  align-items: stretch;
+}
+
+.sectionTitle {
+  color: #0d0f10;
+  background: color-mix(in oklab, #ffffff 60%, #dce9f5 40%);
+  border: 1px solid #c8cdd2;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 48px);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.sectionBody {
+  color: #0d0f10;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 20px);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  max-width: 70ch;
+}
+
+.heroTitle {
+  color: #0d0f10;
+  font-weight: 800;
+  font-size: clamp(40px, 9vw, 120px);
+}
+
+@media (max-width: 1024px) {
+  .sectionGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .sectionTitle {
+    text-align: left;
+    justify-content: flex-start;
+    font-size: clamp(22px, 6vw, 32px);
+  }
+  .sectionBody {
+    max-width: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .container,
+  .sectionGrid {
+    padding: 0 16px;
+  }
+}
+.aboutHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.aboutName {
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 800;
+  color: #0d0f10; /* black-ish */
+  margin: 0;
+}
+
+.aboutCredentials {
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 700;
+  color: #0d0f10; /* black-ish */
+  margin: 10px 0 0;
+}
+.heroName {
+  display: block;
+  font-size: clamp(36px, 6vw, 64px); /* big, scalable */
+  font-weight: 800;
+  color: #0d0f10; /* strong black */
+  margin-bottom: 0.25em;
+}
+
+.heroCredentials {
+  display: block;
+  font-size: clamp(18px, 3vw, 28px); /* smaller than name */
+  font-weight: 700;
+  color: #0d0f10;
+}
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroName {
+  display: block;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  color: #0d0f10;
+  margin-bottom: 0.2em;
+}
+
+.heroCredentials {
+  display: block;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 700;
+  color: #0d0f10;
+}
+
+.heroHeadshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headshotPlaceholder {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #d9d9d9; /* temp placeholder color */
+}
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;   /* vertically center across the row */
+  gap: 2rem;
+  min-height: 70vh;      /* gives the hero section height to center within */
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical centering inside its own column */
+  align-items: center;      /* horizontal centering inside the column */
+  text-align: center;       /* centers the text itself */
+}
+
+.heroName {
+  display: block;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  color: #0d0f10;
+  margin-bottom: 0.2em;
+}
+
+.heroCredentials {
+  display: block;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 700;
+  color: #0d0f10;
+}
+/* ===== HERO FINAL PALETTE OVERRIDES (place at END of file) ===== */
+
+/* Deep green hero with ivory-gold typography */
+.hero {
+  background: linear-gradient(to bottom, #0f3832, #113734); /* your hero bg */
+  color: #e4d3aa; /* base text tone */
+}
+
+/* Ensure all hero title pieces inherit the same color, regardless of earlier rules */
+.hero .heroTitle,
+.hero .heroSubline,
+.hero .heroName,
+.hero .heroCredentials {
+  color: #e4d3aa !important;  /* win specificity vs. earlier duplicates */
+}
+
+/* Optional: keep the serif + sizes you’re using */
+.hero .heroTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.hero .heroName {
+  font-weight: 800;
+}
+
+.hero .heroCredentials {
+  font-weight: 700;
+}
+/* Page background — solid hero text color */
+.page {
+  min-height: 100dvh;
+  background-color: #e4d3aa; /* match hero text color */
+  color: #1a1a1a; /* dark text for readability */
+}
+
+/* Hero section */
+.hero {
+  background-color: #0f3832; /* deep green smoke */
+  color: #e4d3aa;           /* gold-ivory text */
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hero text */
+.heroTitle,
+.heroSubline,
+.heroName,
+.heroCredentials {
+  color: #e4d3aa !important;
+}
+/* === OVERRIDE: make the section title tiles match the hero colors === */
+.sectionTitle {
+  background: #0f3832 !important;                            /* deep green (hero bg) */
+  color: #e4d3aa !important;                                 /* ivory-gold (hero text) */
+  border: 1px solid rgba(228, 211, 170, 0.35) !important;    /* soft gold outline */
+  border-radius: 16px;                                       /* keep rounded tile look */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);                /* lift on the dark tile */
+}
+
+/* Ensure any nested text inside the title block inherits the gold tone */
+.sectionTitle * {
+  color: #e4d3aa !important;
+}
