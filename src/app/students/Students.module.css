@@ -13,7 +13,6 @@
   line-height: 1.1;
   letter-spacing: 0.01em;
   margin: 0 0 1.5rem 0;
-  /* color inherits */
 }
 
 .subheading {
@@ -45,7 +44,6 @@
   padding: 0.75rem 1rem;
   border-radius: 999px;
 
-  /* subtle surface using current color; background stays transparent overall */
   background: color-mix(in srgb, currentColor 8%, transparent);
   border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
 
@@ -66,7 +64,6 @@
    Matches SystemSnapshot tiles
    ============================== */
 .scrollContainer {
-  /* vertical stack that wraps on wide screens like a grid of step tiles */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
@@ -79,7 +76,6 @@
   grid-template-rows: auto 1fr;
   gap: 0.5rem;
 
-  /* card surface mirroring SystemSnapshot step tiles */
   background: color-mix(in srgb, currentColor 8%, transparent);
   border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
   border-radius: 12px;
@@ -129,7 +125,6 @@
   font-weight: 600;
   text-decoration: none;
 
-  /* button inherits color palette; avoid forcing new colors */
   background: transparent;
   border: 1px solid currentColor;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
@@ -154,6 +149,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 /* --- Student Performance System (match SystemSnapshot layout + original colors) --- */
 .section {
   padding: 4rem 2rem;
@@ -207,7 +203,7 @@
   display: grid;
   place-items: center;
   font-weight: 700;
-  background: rgba(232, 227, 217, 0.2); /* bone tint */
+  background: rgba(232, 227, 217, 0.2);
   color: #e4d3aa;
 }
 
@@ -230,8 +226,8 @@
 
 /* High-visibility bone panel */
 .infoPanel {
-  background: #e8e3d9;         /* bone backlight */
-  color: #113734;               /* deep green text for contrast */
+  background: #e8e3d9;
+  color: #113734;
   border-radius: 14px;
   padding: 1.5rem 1.75rem;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
@@ -246,30 +242,21 @@
   .contentGrid { grid-template-columns: 1fr; }
   .infoPanel { order: -1; margin-bottom: 1.5rem; }
 }
+
 /* Full-page background (outside the Student Performance System section) */
 .wrapper {
-  background: #ebe6d7; /* Bone — replace if your original was different */
+  background: #ebe6d7;
   color: inherit;
   min-height: 100dvh;
 }
-/* Parent-focused promo headline (matches WhoWeAre headline style) */
+
+/* Parent-focused promo headline */
 .promoHeadline {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 4rem;
   font-family: var(--font-geist-sans), sans-serif;
-  color: #e4d3aa; /* same color used in WhoWeAre headline */
-}
-/* Parent promo sentence — match HERO background color */
-.promoHeadline {
-  color: #0f3832 !important; /* use #113734 if you prefer the lower gradient tone */
-}
-/* Full-page background: bone → white */
-.wrapper {
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #f3ecdc 0%, #ffffff 100%);
-  /* keep your existing padding if you already set it; otherwise: */
-  padding: 4rem 2rem;
+  color: #0f3832 !important;
 }
 
 /* Optional: give the "Tutoring Topics" block a soft bone → white panel */
@@ -280,43 +267,264 @@
   margin-bottom: 4rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
-/* How Tutoring Works paragraph – keep typography consistent */
-.howItWorks {
-  max-width: 900px;
-  margin: 0 auto 2rem auto; /* centered, with spacing above CTA */
-}
 
-.howText {
-  margin: 0;
-  font-family: var(--font-geist-sans, system-ui), sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  letter-spacing: 0.2px;
-  color: inherit; /* uses page text color */
-}
-/* Center the single hover tile and match tile visuals */
+/* ===========================
+   How Tutoring Works — full width
+   =========================== */
 .howItWorks {
-  margin: 0 auto 2rem auto;
-  max-width: 1100px;
+  margin: 3rem 0 2rem 0; /* extra space above to separate from SystemSnapshot */
+  width: 100%;
+  max-width: none;        /* allow tile to stretch full container width */
 }
 
 .howTile {
-  /* reuses .tile visuals; just control width/centering */
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
-  max-width: 980px;
-  padding: 1.5rem 1.75rem; /* a bit roomier for paragraph */
+  padding: 1.75rem 1.75rem;
 }
 
-.howText {
+.howHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.howTitle {
   margin: 0;
   font-family: var(--font-geist-sans, system-ui), sans-serif;
-  font-size: 1rem;         /* consistent with page text */
-  line-height: 1.6;
-  letter-spacing: 0.2px;
-  color: inherit;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
-/* Extra space between SystemSnapshot and How Tutoring Works */
-.howItWorks {
-  margin-top: 3rem; /* adjust to taste: 2–4rem */
+
+.priceBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  white-space: nowrap;
+}
+
+.howBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.howLead {
+  margin: 0 0 1rem 0;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.howGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 0.5rem 0 1.25rem 0;
+}
+
+.howBlock {
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+
+.howBlockTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+}
+
+.howList {
+  margin: 0;
+  padding-left: 1.05rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.howCtaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.ctaButtonPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  border: 1px solid currentColor;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.ctaButtonPrimary:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, currentColor 16%, transparent);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.howNote {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Responsive for How Tutoring Works */
+@media (max-width: 960px) {
+  .howGrid {
+    grid-template-columns: 1fr;
+  }
+  .howHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+/* Fix tile width so it fits neatly in page container */
+.howTile {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;       /* keep it inside the page */
+  padding: 1.75rem 1.75rem;
+  box-sizing: border-box; /* ensures padding doesn't overflow */
+}
+
+/* Keep price badge smaller and anchored properly */
+.priceBadge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  white-space: nowrap;
+  flex-shrink: 0;           /* prevents stretching */
+}
+/* === Fit & prominence adjustments for How Tutoring Works === */
+.howTile {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;            /* keeps tile comfortably within page width */
+  padding: 1.75rem 1.75rem;
+  box-sizing: border-box;      /* prevent overflow from padding */
+}
+
+.priceBadge {
+  display: inline-block;       /* shrink to content width */
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* === Teaching & Tutoring Background (compact credibility) === */
+.howCred {
+  margin-top: 1rem;
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+
+.howCredTitle {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-family: var(--font-geist-sans, system-ui), sans-serif;
+}
+
+.howCredIntro {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.howCredList {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  list-style: disc;
+}
+
+/* Responsive keep-tidy */
+@media (max-width: 960px) {
+  .howTile { max-width: 100%; }
+}
+/* Increase all text inside How Tutoring Works tile */
+.howTile {
+  font-size: 1.5em;   /* scales everything inside */
+  line-height: 1.55;  /* keeps readability with larger text */
+}
+
+/* Optional: keep headings visually distinct */
+.howTile h2,
+.howTile h3 {
+  font-size: 1.15em;  /* relative to the new base inside */
+  font-weight: 700;
+}
+/* Bigger bottom Schedule Now button */
+.bottomCtaSection .ctaButton {
+  font-size: 1.25rem;       /* larger text */
+  padding: 1rem 2.25rem;    /* taller and wider */
+  border-radius: 10px;      /* keep proportions */
+  font-weight: 700;         /* bolder */
+  letter-spacing: 0.02em;   /* slight tracking for clarity */
+}
+/* Expand the info panel tile in Student Performance System */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr; /* left = steps, right = infoPanel wider */
+  gap: 2rem;
+  align-items: start;
+}
+
+.infoPanel {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  background: var(--bone, #f9f6f1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }

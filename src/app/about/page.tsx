@@ -78,6 +78,8 @@ export default function AboutPage() {
         </p>
       </Section>
 
+      {/* NEW: Credibility / background section (Option 3) */}
+
       <Section title="What I Do">
         <p>
           My work is to deliver integrative, psychology-informed mental
@@ -132,12 +134,12 @@ export default function AboutPage() {
         <p>
           This practice is built on a conviction: in a world defined by
           information overload, fractured attention, and constant pressure,
-          reflection is not enough. Performance requires structure.
+          reflection is insufficient. Performance requires structure.
         </p>
         <p>
           My commitment is to provide that structure. I deliver the knowledge,
           tools, and behavioral systems that make clarity and momentum
-          sustainable. The aim is not only individual improvement but prosocial
+          sustainable. The aim is both individual improvement and prosocial
           impact—when people function at their best, they strengthen the
           families, organizations, and communities they are part of.
         </p>

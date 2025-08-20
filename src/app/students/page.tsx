@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import styles from './Students.module.css';
 
 const tutoringTopics: string[] = [
@@ -31,7 +32,6 @@ const tutoringTopics: string[] = [
 
 const sections = {
   'Student Services': [
-    
     {
       title: 'Organization',
       description:
@@ -99,6 +99,8 @@ function StudentSystemSnapshot() {
   );
 }
 
+const PAYPAL_URL = 'https://www.paypal.com/ncp/payment/BGYVAL2LEPV2Q';
+
 export default function StudentsPage() {
   return (
     <main className={styles.wrapper}>
@@ -106,9 +108,8 @@ export default function StudentsPage() {
       <motion.h1
         className={styles.promoHeadline}
         initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
       >
         Give your student a weekly performance system that improves behavior and discipline, grows generativity and creativity, and supports mental health—book a consult today.
       </motion.h1>
@@ -144,25 +145,88 @@ export default function StudentsPage() {
 
       <StudentSystemSnapshot />
 
-      {/* How tutoring works (hover tile) */}
-      <section className={styles.howItWorks} aria-label="How tutoring works">
+      {/* How tutoring works (full-width emphasis tile) */}
+      <section className={styles.howItWorks} aria-labelledby="how-heading">
         <div className={`${styles.tile} ${styles.howTile}`}>
-          <h2>How Tutoring Works</h2>
-          <p className={styles.howText}>
-            Tutoring runs online via secure video with screen sharing. We start with a brief COM-B assessment to map each
-            student’s Capability, Opportunity, and Motivation, then set goals and a weekly study plan. Each session
-            includes a quick progress check, targeted instruction, guided practice with immediate feedback, and a short
-            assignment calibrated to the COM-B profile. Materials and homework live in a shared folder, and progress is
-            tracked with simple metrics (accuracy, time-on-task, completion). Parent check-ins are available on request.
+          <div className={styles.howHeaderRow}>
+            <h2 id="how-heading" className={styles.howTitle}>How Tutoring Works</h2>
+            <div className={styles.priceBadge}>$35 / session</div>
+          </div>
+
+          <div className={styles.howBadges}>
+            <span className={styles.badge}>Online video + screen share</span>
+            <span className={styles.badge}>Exam or essay support</span>
+            <span className={styles.badge}>Habit & study systems coaching</span>
+          </div>
+
+          <p className={styles.howLead}>
+            Focused on academics and student life. Every session builds <strong>comprehension</strong> and <strong>confidence</strong>.
+            I also create and support <strong>Individual Education Plans (IEPs)</strong> to give students a clear roadmap.
           </p>
+
+          <div className={styles.howGrid}>
+            <div className={styles.howBlock}>
+              <h3 className={styles.howBlockTitle}>Setup</h3>
+              <ul className={styles.howList}>
+                <li>Short <strong>COM-B</strong> assessment (Capability, Opportunity, Motivation)</li>
+                <li>Defined goals and a simple weekly plan</li>
+              </ul>
+            </div>
+
+            <div className={styles.howBlock}>
+              <h3 className={styles.howBlockTitle}>In Each Session</h3>
+              <ul className={styles.howList}>
+                <li>Quick progress check</li>
+                <li>Targeted instruction</li>
+                <li>Guided practice with immediate feedback</li>
+                <li>Short assignment matched to the COM-B profile</li>
+              </ul>
+            </div>
+
+            <div className={styles.howBlock}>
+              <h3 className={styles.howBlockTitle}>Logistics</h3>
+              <ul className={styles.howList}>
+                <li>Materials in a shared folder</li>
+                <li>Simple metrics: accuracy, completion, time-on-task</li>
+                <li>Parent check-ins anytime on request</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Credibility block (always visible; compact) */}
+          <div className={styles.howCred}>
+            <h3 className={styles.howCredTitle}>Teaching & Tutoring Background</h3>
+            <p className={styles.howCredIntro}>
+              Years in teaching and one-to-one tutoring inform how I design clear, practical IEPs and execution plans.
+            </p>
+            <ul className={styles.howCredList}>
+              <li>Classroom teaching, one-to-one tutoring, and family collaboration</li>
+              <li>IEP design and implementation aligned to everyday school demands</li>
+              <li>Emphasis on comprehension, confidence, and durable study systems</li>
+            </ul>
+          </div>
+
+          <div className={styles.howCtaRow}>
+            <Link
+              href={`/schedule?pay=${encodeURIComponent(PAYPAL_URL)}`}
+              className={styles.ctaButtonPrimary}
+              aria-label="Schedule a $35 tutoring session"
+            >
+              Book a $35 Session
+            </Link>
+            <span className={styles.howNote}>Flexible focus: single assignment or ongoing habit coaching.</span>
+          </div>
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* Bottom CTA — keeps existing flow */}
       <section className={styles.bottomCtaSection}>
-        <a href="/book-session" className={styles.ctaButton}>
+        <Link
+          href={`/schedule?pay=${encodeURIComponent(PAYPAL_URL)}`}
+          className={styles.ctaButton}
+        >
           Schedule Now
-        </a>
+        </Link>
       </section>
     </main>
   );

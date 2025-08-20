@@ -165,6 +165,7 @@
   .cards { grid-column: 1 / -1; }
   .card { grid-column: span 12; }
 }
+
 .sectionGrid {
   display: grid;
   grid-template-columns: 1fr 2fr; /* left = title, right = content */
@@ -545,4 +546,26 @@
 /* Ensure any nested text inside the title block inherits the gold tone */
 .sectionTitle * {
   color: #e4d3aa !important;
+}
+
+/* --- NEW: compact credibility list styling for the background section --- */
+.credList {
+  margin: 12px 0 0 20px;
+  display: grid;
+  gap: 6px;
+  font-weight: 700;              /* keeps authority tone without adding fluff */
+  list-style: disc;
+}
+/* === OVERRIDE: remove bolding from About Me text === */
+.sectionBody,
+.sectionBody p,
+.heroSubline,
+.heroCredentials,
+.aboutCredentials,
+.cardDesc {
+  font-weight: 400 !important; /* normal weight */
+}
+
+.sectionBody li {
+  font-weight: 400 !important; /* ensure list items are normal too */
 }
